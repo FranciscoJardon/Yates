@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-- js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"
+></script>
+    <!-- ===== LIBRERIAS JS ===== -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <title>Renta de Yates</title>
+</head>
+
+<body>
+
+    <header class="w-full flex justify-center fixed z-30">
+        <nav class="flex w-full  max-w-7xl  justify-between items-center">
+            <div class="w-1/6">
+                <img class="w-[140px]" src="assets/img/logo.svg" alt="">
+            </div>
+            <div class="flex gap-6 text-white">
+                <a href="/">HOME </a>
+                <a href="">SERVICES</a>
+                <a href="#">DESTINATIONS</a>
+                <a href="#">CONTACT</a>
+            </div>
+            <div class="w-1/6 text-white flex justify-end	">
+                <a href="">asdad</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="w-full flex flex-col gap-10 relative">
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper SliderPortada">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ImgPortada">
+                        <img src="assets/img/barco1.jpeg" />
+                    </div>
+                    <div class="swiper-slide ImgPortada">
+                        <img src="assets/img/barco2.jpeg" />
+                    </div>
+                    <div class="swiper-slide ImgPortada">
+                        <img src="assets/img/barco.jpeg" />
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="flex flex-col gap-5  z-10 ContenedorMiniSlider">
+                <div class="flex gap-5 ">
+                    <div class="flex gap-5">
+                        <img class="arrow-left w-10" src="assets/img/arrow-left.svg" alt="">
+                        <img class="arrow-right w-10" src="assets/img/arrow-right.svg" alt="">
+                    </div>
+                    <h2 class="titulo-principal-white ">
+                        Sunseeker 80
+                    </h2>
+                </div>
+                <div thumbsSlider="" class="swiper MiniSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ImgPortada">
+                            <img src="assets/img/barco1.jpeg" />
+                        </div>
+                        <div class="swiper-slide ImgPortada">
+                            <img src="assets/img/barco2.jpeg" />
+                        </div>
+                        <div class="swiper-slide ImgPortada">
+                            <img src="assets/img/barco.jpeg" />
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section>
+           
+                  
+                    <div class="grid grid-cols-2 pl-24 gap-6 ">
+                        <div class=" pt-12">
+                           
+                            <div class="flex flex-wrap gap-6">
+                                <div class="flex items-center justify-center gap-2">
+                                  <img class="w-16 h-10" src="assets/img/user-2.svg" alt="" />
+                                  <p>Guests</p>
+                                  <p>3</p>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                  <img class="w-16 h-10" src="assets/img/beds.svg" alt="" />
+                                  <p>3</p>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                  <img class="w-16 h-10" src="assets/img/wc.svg" alt="" />
+                                  <p>Baths</p>
+                                  <p>3</p>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                  <img class="w-16 h-10" src="assets/img/food.svg" alt="" />
+                                  <p>Food & Open bar incluide</p>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                  <img class="w-16 h-10" src="assets/img/activities.svg" alt="" />
+                                  <p>
+                                    <strong>Water toys:</strong> Snorkel Gear, Paddle boards, Kayaks, Fishing
+                                    Gear. Lily Pad
+                                  </p>
+                                </div>
+                              </div>
+                              <div>
+                                <h1>BARCO</h1>
+                              </div>
+                            
+                              <div>
+                                <h3 class="text-2xl text-[#053A55] font-bold">Description</h3>
+                                <p>
+                                    Crew Included? Absolutely. Your experience comes complete with a skilled team including a Captain, Chef, Steward, and Mate. Sit back, relax, and let us take care of everything for you.
+                                </p>
+                              </div>
+                            
+                              <div id="accordion-collapse" data-accordion="collapse">
+                                <h2 id="accordion-collapse-heading-1">
+                                  <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500  dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                                    data-accordion-target="#accordion-collapse-body-1"
+                                    aria-expanded="true"
+                                    aria-controls="accordion-collapse-body-1"
+                                  >
+                                    <span class="text-[#053A55]">Fuel Included</span>
+                                    <svg
+                                      data-accordion-icon
+                                      class="w-3 h-3 rotate-180 shrink-0"
+                                      aria-hidden="true"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 10 6"
+                                    >
+                                      <path
+                                        stroke="#053A55"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5 5 1 1 5"></path>
+                                    </svg>
+                                  </button>
+                                </h2>
+                                <div
+                                  id="accordion-collapse-body-1"
+                                  class="hidden"
+                                  aria-labelledby="accordion-collapse-heading-1"
+                                >
+                                  <div
+                                    class="p-5"
+                                  >
+                                    <p class="text-gray-500 dark:text-gray-400">
+                                        {text1}
+                                    </p>
+                                  </div>
+                                </div>
+                                <h2 id="accordion-collapse-heading-2">
+                                  <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500  dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                                    data-accordion-target="#accordion-collapse-body-2"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-collapse-body-2"
+                                  >
+                                    <span class="text-[#053A55]">Beverages and alcoholic drinks incluided</span>
+                                    <svg
+                                      data-accordion-icon
+                                      class="w-3 h-3 rotate-180 shrink-0"
+                                      aria-hidden="true"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 10 6"
+                                    >
+                                      <path
+                                        stroke="#053A55"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5 5 1 1 5"></path>
+                                    </svg>
+                                  </button>
+                                </h2>
+                                <div
+                                  id="accordion-collapse-body-2"
+                                  class="hidden"
+                                  aria-labelledby="accordion-collapse-heading-2"
+                                >
+                                  <div class="p-5">
+                                    <p class="mb-2 text-gray-500 dark:text-gray-400">
+                                        {text2}
+                                    </p>
+                                   
+                                  </div>
+                                </div>
+                                <h2 id="accordion-collapse-heading-3">
+                                  <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500  dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"        data-accordion-target="#accordion-collapse-body-3"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-collapse-body-3"
+                                  >
+                                    <span class="text-[#053A55]">Food Menu. (Choose two of each)</span>
+                                    <svg
+                                      data-accordion-icon
+                                      class="w-3 h-3 rotate-180 shrink-0"
+                                      aria-hidden="true"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 10 6"
+                                    >
+                                      <path
+                                        stroke="#053A55"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5 5 1 1 5"></path>
+                                    </svg>
+                                  </button>
+                                </h2>
+                                <div
+                                  id="accordion-collapse-body-3"
+                                  class="hidden"
+                                  aria-labelledby="accordion-collapse-heading-3"
+                                >
+                                  <div class="p-5">
+                                    <p class="mb-2 text-gray-500 dark:text-gray-400">
+                                        {text3}
+                                    </p>
+                                  </div>
+                                </div>
+                            
+                                <h2 id="accordion-collapse-heading-4">
+                                  <button
+                                    type="button"
+                                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500  dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"        data-accordion-target="#accordion-collapse-body-4"
+                                    aria-expanded="false"
+                                    aria-controls="accordion-collapse-body-4"
+                                  >
+                                    <span class="text-[#053A55]">Guests</span>
+                                    <svg
+                                      data-accordion-icon
+                                      class="w-3 h-3 rotate-180 shrink-0"
+                                      aria-hidden="true"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 10 6"
+                                    >
+                                      <path
+                                        stroke="#053A55"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5 5 1 1 5"></path>
+                                    </svg>
+                                  </button>
+                                </h2>
+                                <div
+                                  id="accordion-collapse-body-4"
+                                  class="hidden"
+                                  aria-labelledby="accordion-collapse-heading-4"
+                                >
+                                  <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                    <p class="mb-2 text-gray-500 dark:text-gray-400">
+                                        {text4}
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                           
+                           
+                              <div>
+                                <h1 class="text-[#053A55] font-bold">Pricing</h1>
+                              </div>
+                              <div>
+                                <div class="flex items-center gap-3 my-4">
+                                  <h3 class="text-[#053A55] font-bold">2 Hours</h3>
+                                  <div class="border-b border-black w-[70%]"></div>
+                                  <div class="bg-[#053A55] rounded-full">
+                                    <p class="text-white font-bold py-2 px-4">$2323 USD</p>
+                                  </div>
+                                </div>
+                                <div class="flex items-center gap-3 my-4">
+                                  <h3 class="text-[#053A55] font-bold">2 Hours</h3>
+                                  <div class="border-b border-black w-[70%]"></div>
+                                  <div class="bg-[#053A55] rounded-full">
+                                    <p class="text-white font-bold py-2 px-4">$2323 USD</p>
+                                  </div>
+                                </div>
+                                <div class="flex items-center gap-3 my-4">
+                                  <h3 class="text-[#053A55] font-bold">2 Hours</h3>
+                                  <div class="border-b border-black w-[70%]"></div>
+                                  <div class="bg-[#053A55] rounded-full">
+                                    <p class="text-white font-bold py-2 px-4">$2323 USD</p>
+                                  </div>
+                                </div>
+                                <div class="flex items-center gap-3 my-4">
+                                  <h3 class="text-[#053A55] font-bold">2 Hours</h3>
+                                  <div class="border-b border-black w-[70%]"></div>
+                                  <div class="bg-[#053A55] rounded-full">
+                                    <p class="text-white font-bold py-2 px-4">$2323 USD</p>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                              <div class="my-24">
+                                <p class="font-bold text-2xl">
+                                  *Custom & overnight packages available upon request*
+                                  <ul class="list-disc pl-4 font-bold text-2xl">
+                                    <li>10% - 15% Suggested crew gratuity is not included.</li>
+                                    <li>Tax not included.</li>
+                                  </ul>
+                                </p>
+                              </div>
+                            
+                              <h2>Why Choose Mangusta?</h2>
+                              <p>
+                                Mangusta offers an unparalleled luxury yachting experience. With exceptional
+                                quality and innovative design, every moment on the water is one of maximum
+                                comfort and luxury. Choose Mangusta for unforgettable moments in a
+                                world-class setting.
+                              </p>
+                            
+                              <a
+                                class="py-3 font-bold text- px-7 my-6 rounded-full inline-block text-white bg-[#053A55]"
+                                href="Contat us"
+                              >
+                                Contact us</a
+                              >
+                        </div>
+                        <div>
+                            <div class="bg-[#053A55] p-10">
+                                <div class="flex gap-8 justify-start items-start">
+                                  <img src="../../../public/img/pricing.svg" alt="" />
+                                  <div>
+                                    <h1 class="text-white">FROM $3800 USD</h1>
+                                    <p class="text-white">Up TO 12 PAX</p>
+                                  </div>
+                                </div>
+                                <div class="flex gap-6 mt-12">
+                                  <div class="flex items-center gap-3">
+                                    <img src="../../../public/img/speed.svg" alt="" />
+                                    <p class="text-white text-xl">8-Hour Daytrip</p>
+                                  </div>
+                                  <div class="flex items-center gap-3">
+                                    <img src="../../../public/img/heart.svg" alt="" />
+                                    <p class="text-white text-xl">8-Hour Daytripa</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="  shadow-xl p-5">
+                                <div class="flex flex-col items-start justify-start">
+                                    <!-- Inputs -->
+                                  
+                                    <div class="w-full">
+                                      <label
+                                        for="small-input"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                        >Name</label
+                                      >
+                                      <input
+                                        type="text"
+                                        id="small-input"
+                                        class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                      />
+                                  
+                                      <label
+                                        for="small-input"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                        >Email</label
+                                      >
+                                      <input
+                                        type="email"
+                                        id="email"
+                                        class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                      />
+                                    </div>
+                                  
+                                    <!-- Inputs -->
+                                  
+                                    <!-- Persons -->
+                                    <div class="flex flex-row justify-around w-full gap-8 items-center">
+                                      <form class="my-4 w-1/3">
+                                        <label
+                                          for="number-input"
+                                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                          >Persons:</label
+                                        >
+                                        <input
+                                          type="number"
+                                          id="number-input"
+                                          aria-describedby="helper-text-explanation"
+                                          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                          placeholder="1"
+                                          required
+                                        />
+                                      </form>
+                                  
+                                    <!-- Persons -->
+                                  
+                                    <!-- date -->
+                                    <div class="relative w-1/3">
+                                      
+                                      <div
+                                        class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                                      >
+                                        <svg
+                                          class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="currentColor"
+                                          viewBox="0 0 20 20"
+                                        >
+                                          <path
+                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                                          ></path>
+                                        </svg>
+                                      </div>
+                                      <input
+                                        datepicker
+                                        type="text"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Select date"
+                                      />
+                                    </div>
+                                    <!-- date -->
+                                  
+                                  
+                                      <form class="my-6 w-1/3">
+                                      <label
+                                        for="countries"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                        >Select hours</label
+                                      >
+                                      <select
+                                        id="countries"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                      >
+                                        <option value="2">2</option>
+                                        <option value="4">4</option>
+                                        <option value="6">6</option>
+                                        <option value="8">8</option>
+                                      </select>
+                                    </form>
+                                  
+                                      
+                                    </div>
+                                  
+                                    <!-- Message -->
+                                    <label
+                                      for="message"
+                                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                      >Your message</label
+                                    >
+                                    <textarea
+                                      id="message"
+                                      rows="4"
+                                      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                      placeholder="Write your thoughts here..."></textarea>
+                                  
+                                    <!-- Message -->
+                                  
+                                    <!-- Horas -->
+                                  
+                                    <!-- Submit -->
+                                    <div>
+                                      <button type="submit">Book Now</button>
+                                    </div>
+                                  </div>
+                              </div>
+                              <iframe
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117582.22885067227!2d-109.9714121441425!3d22.93384583528302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86af4af389e508a1%3A0x4ba4df62c1a2b868!2sCabo%20San%20Lucas%2C%20BCS!5e0!3m2!1sen!2smx!4v1709847843303!5m2!1sen!2smx"
+                              width="100%"
+                              height="450"
+                              style="border:0;"
+                              allowfullscreen=""
+                              loading="lazy"
+                              referrerpolicy="no-referrer-when-downgrade"
+                            >
+                            </iframe>
+
+                            <iframe
+  width="100%"
+  height="415"
+  src="https://www.youtube.com/embed/7PIji8OubXU?si=qRxLPz8q1-8egZKx"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
+                        </div>
+                    </div>
+          
+        </section>
+
+
+        <section>
+            <div class="max-w-[1600px] m-auto">
+              <div class="text-center my-3">
+                <h1 class="text-[#053A55]">GALLERY</h1>
+              </div>
+              <div class="grid grid-cols-3 grid-rows-2 gap-x-1 gap-y-1">
+                <img src="assets/img/Propuesta-3 1.png" alt="" />
+                <img src="assets/img/Propuesta-3 1.png" alt="" />
+                <img src="assets/img/Propuesta-3 1.png" alt="" />
+                <img src="assets/img/Propuesta-3 1.png" alt="" />
+                <img src="assets/img/Propuesta-3 1.png" alt="" />
+                <img src="assets/img/Propuesta-3 1.png" alt="" />
+              </div>
+            </div>
+          </section>
+
+        
+          
+
+         <!-- News Letter-->
+    <section class="w-full flex  justify-center items-center flex-col">
+        <div class="w-full relative flex  justify-center items-center">
+            <img class="w-full" src="assets/img/portada-news.png">
+            <div class="absolute text-center flex flex-col gap-5 max-w-7xl"   >
+                <h1 class="text-white uppercase ">Unforgettable experiences</h1>
+                <p class="text-white">
+                  Embark on a unique experience. Discover the beauty of its crystal-clear waters and spectacular views. Choose between La Paz or Cabo to start your adventure on one of our exclusive yachts. Live unforgettable moments at the pinnacle of Mexican navigation. We look forward to welcoming you for an unforgettable experience!
+                </p>
+                <a class="button-blue" href="">CONTACT US</a>
+            </div>
+        </div>
+    
+        <div class="flex max-w-7xl bg-[var(--color-principal)]  text-white items-center justify-center mt-[-6rem] z-10 mb-[10rem]">
+            <div class="flex gap-5 flex-col p-[3rem] w-[50%]">
+                <h2 class="titulo-principal-white underline">SUSCRIBE TO OUR <br>NEWSLETTER</h2>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+            </div>
+    
+            <form id="FormNewsLetter" class="w-[50%] flex flex-col  p-10 justify-center items-center
+            gap-5">
+               <div class="flex gap-5 w-full justify-between ">
+                <input id="NombreUsuarioNews" placeholder="NAME" class="InputFormB" type="text">
+                <input id="CorreoUsuarioNews" placeholder="MAIL" class="InputFormB" type="text">
+               </div>
+                <button class="InputFormB flex justify-center items-center  gap-5 w-full">
+                    <img src="assets/img/mail.svg">    
+                    SING UP
+                </button>
+            </form>
+    
+        </div>
+          
+    </section>
+  
+
+
+    </main>
+
+
+
+    <footer class="bg-[#053A55] w-full py-10">
+        <div class="flex justify-between items-center  max-w-7xl m-auto">
+            <div>
+                <img src="assets/img/logo.svg" alt="" />
+            </div>
+            <nav class="flex w-full justify-around px-6">
+                <a class="text-white" href="">About us</a>
+                <a class="text-white" href=""> Contact us</a>
+                <a class="text-white" href="">Faqs</a>
+                <a class="text-white" href=""> Terms</a>
+            </nav>
+            <div class="flex gap-2">
+                <a href=""> <img src="assets/img/facebook.svg" alt="" /></a>
+                <a href=""> <img src="assets/img/instagram.svg" alt="" /></a>
+                <a href=""> <img src="assets/img/youtube.svg" alt="" /></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".MiniSlider", {
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".SliderPortada", {
+            loop: true,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: ".arrow-right",
+                prevEl: ".arrow-left",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+
+
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

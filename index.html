@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-- js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!-- ===== LIBRERIAS JS ===== -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <title>Renta de Yates</title>
+</head>
+
+<body>
+
+    <header class="w-full flex justify-center fixed z-30">
+        <nav class="flex w-full  max-w-7xl  justify-between items-center">
+            <div class="w-1/6">
+                <img class="w-[140px]" src="assets/img/logo.svg" alt="">
+            </div>
+            <div class="flex gap-6 text-white">
+                <a href="/">HOME </a>
+                <a href="">SERVICES</a>
+                <a href="#">DESTINATIONS</a>
+                <a href="#">CONTACT</a>
+            </div>
+            <div class="w-1/6 text-white flex justify-end	">
+                <a href="">asdad</a>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+    <!-- Portada -->    
+    <section class="w-full h-dvh flex text-white justify-center items-center flex-col">
+        <img class="w-full h-full object-cover absolute z-0   brightness-80" src="assets/img/portadahome.JPG">
+        <div class="w-full z-10 text-center" style="margin-top: -6rem;">
+            <h2 class="italic">THE FINEST CHARTER COMPANY</h2>
+            <h1>MEXICO’S BEST YACHTING AND <br> DEEPSEA FISHING ADVENTURE</h1>
+            <p>Discover cabo and la paz most breathtaking locations</p>
+        </div>
+        <div class="bg-[#00000059] z-10 w-full flex justify-center absolute  bottom-0">
+            <div class="w-full  max-w-7xl py-10 flex flex-col  gap-5">
+                <p class="underline">SELECT AN EXPERIENCE</p>
+                <form class="FormHome">
+                    <input required class="InputFormHome" placeholder="PASSANGERS">
+                    <input required type="date" class="InputFormHome" placeholder="SELECT A DATE">
+                    <input required class="InputFormHome" placeholder="TAPE AN E-MAIL">
+                    <input required class="InputFormHome" placeholder="ACTIVITY">
+                    <button class="Button">INQUIRY NOW</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Informacion -->
+    <section class="w-full flex justify-center flex-col  pt-10 ">
+        <div class="text-center max-w-7xl self-center  flex flex-col gap-3 mb-[6rem]">
+            <p class="italic mb-[4rem] mt-[2rem] color-principal uppercase">
+                Unleash your inner explorer and dive into baja's best yachting
+                adventure.
+            </p>
+            <h2 class="titulo-principal">PRIVATE LUXURY YACHT <br /> CHARTERS AND DEEPSEA</h2>
+            <p class="max-w-[700px] self-center">
+                For over four years, our dedication to exceptional customer service has
+                remained unwavering. We welcome you to reserve with us, guaranteeing a
+                seamless and worry-free journey from the beginning to the end.
+            </p>
+        </div>
+        <div class="w-full flex justify-between gap-20  max-w-7xl self-center z-10 ">
+
+            <div
+                class="flex flex-col justify-center py-[5rem] px-[2rem] gap-8 text-center bg-[rgba(255,255,255,0.79)] w-4/12">
+                <img class="h-10" src="assets/img/user.svg" alt={texto}>
+                <p>The best customer service.Personal assesoration to help you identify the perfect yacht for your
+                    particularneeds.</p>
+            </div>
+
+            <div
+                class="flex flex-col justify-center py-[5rem] px-[2rem] gap-8 text-center bg-[rgba(255,255,255,0.79)] w-4/12">
+                <img class="h-10" src="assets/img/olas.svg" alt={texto}>
+                <p>All-inclusive charters. We’ve alrdeady manage to do the hard work for you! Just seat back and enjoy
+                    the ride.</p>
+            </div>
+
+            <div
+                class="flex flex-col justify-center py-[5rem] px-[2rem] gap-8 text-center bg-[rgba(255,255,255,0.79)] w-4/12">
+                <img class="h-10" src="assets/img/query.svg" alt="">
+                <p>Friendly cancellation and reschedule policies. Secure booking</p>
+            </div>
+
+        </div>
+        <img style="margin-top:-10rem; " class="w-full h-[70vh] object-cover" src="assets/img/imgcards.png" alt="" />
+    </section>
+    <!-- reservar -->
+    <section class="text-center py-[6rem]  flex flex-col gap-10 w-full justify-center items-center">
+        <h2 class="titulo-principal text-center">HOW TO BOOK</h2>
+        <div class="flex w-full justify-center max-w-7xl">
+            <div class="py-[6rem] px-[3em] flex flex-col  gap-5 card bg-white" >
+                <img class="h-[4.4rem]" src="assets/img/map.svg" alt={texto} />
+                <p class="color-principal bold">Choose a destination</p>
+                <p>Choose between our four beautiful destinations.</p>
+                <img class="item-detalle" src="assets/img/item-detalle.png">
+              </div>
+              <div class="py-[6rem] px-[3em] flex flex-col  gap-5 card bg-white" >
+                <img class="h-[4.4rem]" src="assets/img/barco.svg" alt={texto} />
+                <p class="color-principal bold">Select a yacht</p>
+                <p>Identify the perfect yatch for your particular needs.</p>
+                <img class="item-detalle" src="assets/img/item-detalle.png">
+              </div>
+              <div class="py-[6rem] px-[3em] flex flex-col  gap-5 card bg-white" >
+                <img class="h-[4.4rem]" src="assets/img/editar.svg" alt={texto} />
+                <p class="color-principal bold">Film the on-line form</p>
+                <p>Let us know your name, e-mail and the number of passangers.</p>
+                <img class="item-detalle" src="assets/img/item-detalle.png">
+              </div>
+              <div class="py-[6rem] px-[3em] flex flex-col  gap-5 card bg-white" >
+                <img class="h-[4.4rem]" src="assets/img/query.svg" alt={texto} />
+                <p class="color-principal bold">Book a date</p>
+                <p>Confirm your reservation.</p>
+                <img class="item-detalle" src="assets/img/item-detalle.png">
+              </div>
+        </div>
+    </section>
+
+
+    <!-- Tour -->
+    <section class="w-full py-[4rem] flex flex-col gap-10">
+        <h2 class="titulo-principal text-center">OUR TOP PICKS</h2>
+        <div class="swiper SliderRutas">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide CardSlider">
+                    <img class="ImgCard" src="assets/img/paisaje.png" alt="">
+                    <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
+                        <img class="clip" src="assets/img/clip.png">
+                    <p class="color-principal bold underline">LA PAZ CRUISING</p>
+                    <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide CardSlider">
+                    <img class="ImgCard" src="assets/img/paisaje.png" alt="">
+                    <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
+                        <img class="clip" src="assets/img/clip.png">
+                    <p class="color-principal bold underline">LA PAZ CRUISING</p>
+                    <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide CardSlider">
+                    <img class="ImgCard" src="assets/img/paisaje.png" alt="">
+                    <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
+                        <img class="clip" src="assets/img/clip.png">
+                    <p class="color-principal bold underline">LA PAZ CRUISING</p>
+                    <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide CardSlider">
+                    <img class="ImgCard" src="assets/img/paisaje.png" alt="">
+                    <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
+                        <img class="clip" src="assets/img/clip.png">
+                    <p class="color-principal bold underline">LA PAZ CRUISING</p>
+                    <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide CardSlider">
+                    <img class="ImgCard" src="assets/img/paisaje.png" alt="">
+                    <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
+                        <img class="clip" src="assets/img/clip.png">
+                    <p class="color-principal bold underline">LA PAZ CRUISING</p>
+                    <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                    </div>
+                </div>
+                
+
+            </div>
+       
+        </div>
+    </section>
+
+
+
+    <!-- Lsita yates-->
+    <section class="w-full py-[4rem]  flex flex-col gap-10"> 
+        <h2 class="titulo-principal text-center">OUR TOP PICKS</h2>
+        <div class="swiper SliderYates">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide CardSlider">
+                    <img class="ImgCard" src="assets/img/yate.png" alt="">
+                    <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
+                        <img class="clip" src="assets/img/clip.png">
+                    <p class="color-principal bold underline">LA PAZ CRUISING</p>
+                    <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide CardSlider">
+                    <img class="ImgCard" src="assets/img/yate.png" alt="">
+                    <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
+                        <img class="clip" src="assets/img/clip.png">
+                    <p class="color-principal bold underline">LA PAZ CRUISING</p>
+                    <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide CardSlider">
+                    <img class="ImgCard" src="assets/img/yate.png" alt="">
+                    <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
+                        <img class="clip" src="assets/img/clip.png">
+                    <p class="color-principal bold underline">LA PAZ CRUISING</p>
+                    <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide CardSlider">
+                    <img class="ImgCard" src="assets/img/yate.png" alt="">
+                    <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
+                        <img class="clip" src="assets/img/clip.png">
+                    <p class="color-principal bold underline">LA PAZ CRUISING</p>
+                    <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                    </div>
+                </div>
+
+                
+              
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Minibaners-->
+
+    <section class="w-full flex my-[5rem] bg-white justify-between items-center ">
+        <div class="w-[50%] pl-[5rem] flex flex-col gap-5"  >
+            <h2 class="titulo-principal">GET TO KNOW OUR <br> MOST POPULAR</h2>
+            <a class="italic underline">VIEW YACHTS</a>
+            <img class="w-[150px]" src="assets/img/stars.svg" alt="">
+        </div>
+        <img class="ImgDegradado justify-self-stretch" src="assets/img/img-degradado.png" alt="">
+    </section>
+
+
+
+
+
+
+    <!-- News Letter-->
+    <section class="w-full flex  justify-center items-center flex-col">
+        <div class="w-full relative flex  justify-center items-center">
+            <img class="w-full" src="assets/img/portada-news.png">
+            <div class="absolute text-center flex flex-col gap-5 max-w-7xl"   >
+                <h1 class="text-white uppercase ">Unforgettable experiences</h1>
+                <p class="text-white">
+                  Embark on a unique experience. Discover the beauty of its crystal-clear waters and spectacular views. Choose between La Paz or Cabo to start your adventure on one of our exclusive yachts. Live unforgettable moments at the pinnacle of Mexican navigation. We look forward to welcoming you for an unforgettable experience!
+                </p>
+                <a class="button-blue" href="">CONTACT US</a>
+            </div>
+        </div>
+    
+        <div class="flex max-w-7xl bg-[var(--color-principal)]  text-white items-center justify-center mt-[-6rem] z-10 mb-[10rem]">
+            <div class="flex gap-5 flex-col p-[3rem] w-[50%]">
+                <h2 class="titulo-principal-white underline">SUSCRIBE TO OUR <br>NEWSLETTER</h2>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+            </div>
+    
+            <form id="FormNewsLetter" class="w-[50%] flex flex-col  p-10 justify-center items-center
+            gap-5">
+               <div class="flex gap-5 w-full justify-between ">
+                <input id="NombreUsuarioNews" placeholder="NAME" class="InputFormB" type="text">
+                <input id="CorreoUsuarioNews" placeholder="MAIL" class="InputFormB" type="text">
+               </div>
+                <button class="InputFormB flex justify-center items-center  gap-5 w-full">
+                    <img src="assets/img/mail.svg">    
+                    SING UP
+                </button>
+            </form>
+    
+        </div>
+          
+    </section>
+
+    </main>
+
+
+    <!-- News Letter-->
+    <footer class="bg-[#053A55] w-full py-10">
+        <div class="flex justify-between items-center  max-w-7xl m-auto">
+          <div>
+            <img src="assets/img/logo.svg" alt="" />
+          </div>
+          <nav class="flex w-full justify-around px-6">
+            <a class="text-white" href="">About us</a>
+            <a class="text-white" href=""> Contact us</a>
+            <a class="text-white" href="">Faqs</a>
+            <a class="text-white" href=""> Terms</a>
+          </nav>
+          <div class="flex gap-2">
+            <a href=""> <img src="assets/img/facebook.svg" alt="" /></a>
+            <a href=""> <img src="assets/img/instagram.svg" alt="" /></a>
+            <a href=""> <img src="assets/img/youtube.svg" alt="" /></a>
+          </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script>
+        new Swiper(".SliderRutas", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            autoplay: {
+                delay: 3000
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "bullets",
+                clickable: true
+            }, breakpoints: {
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 40,
+                },
+              },
+        });
+        
+        new Swiper(".SliderYates", {
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        autoplay: {
+            delay: 3000
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true
+        }, breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+    
+            },
+          },
+    });
+    
+    </script>
+
+
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
