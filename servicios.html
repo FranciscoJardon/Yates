@@ -7,6 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/index.css">
     <!-- ===== LIBRERIAS JS ===== -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    
+    
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
 
@@ -33,40 +37,35 @@
             <img class="IconMovil" src="assets/img/menu.png">
         </div>
     </nav>
-</header>
+  </header>
 
 
 
     <main class="bg-[#F6F5F5]">
 
-        <section class="w-full h-[700px] md:h-dvh  relative flex justify-center">
+        <section class="w-full h-[700px] md:h-dvh   relative flex justify-center">
             <img class="w-full h-[700px] md:h-dvh object-cover absolute z-0   brightness-80"
             src="assets/img/portadaservicios.png">
             <div class=" relative  w-full max-w-7xl  z-10   ">
-                <h1 class=" absolute left-0 bottom-28 text-white ">SERVICES</h1>
-                <p class=" absolute left-0 bottom-16 text-white">Lorem Ipsum is simply dummy text of</p>
+              <h1 class=" absolute left-5 md:left-0 bottom-24 text-white ">SERVICES </h1>
+              <p class=" absolute left-5 md:left-0 bottom-16 text-white">Lorem Ipsum is simply dummy text of</p>
             </div>
         </section>
 
         <section class="w-full  max-w-7xl  my-10">
             <div class="flex items-center gap-5 flex-col  md:flex-row  ">
-                <div class="flex flex-col  gap-4  p-5  w-1/2">
+                <div class="flex flex-col  gap-4  p-5  md:w-1/2">
                     <h2 class="titulo-principal">Description</h2>
-                  
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
                     </p>
-
                 </div>
-                <div class="swiper mySwiper2 w-1/2" style="--swiper-navigation-color: #fff;">
+                <div class="swiper mySwiper2 px-4 md:w-1/2" style="--swiper-navigation-color: #fff;">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <img  src="assets/img/contacto.png">
+                        <img  src="assets/img/serviceslife.png">
                       </div>
-                      <div class="swiper-slide">
-                        <img  src="assets/img/contacto.png">
-                      </div>
-                
+                     
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -79,10 +78,10 @@
         <section class="w-full mt-10">
             <h2 class="titulo-principal text-center m-10">LIVE THE EXPERIENCES</h2>
             
-            <div class="swiper mySwiper" style="--swiper-navigation-color: #fff;">
+            <div class="swiper SliderExperiences" style="--swiper-navigation-color: #fff;">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide SliderCard">
-                    <img class="h-[300px] w-full object-cover " src="assets/img/contacto.png">
+                    <img class="h-[300px] w-full object-cover " src="assets/img/drinks.png">
 
                     <img class="clip-card " src="assets/img/clip.png">
                     <div class="w-full md:w-[600px] bg-white absolute p-5 TextoCard">
@@ -94,7 +93,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide SliderCard">
-                    <img class="h-[300px] w-full object-cover " src="assets/img/contacto.png">
+                    <img class="h-[300px] w-full object-cover " src="assets/img/comida.png">
 
                     <img class="clip-card " src="assets/img/clip.png">
                     <div class="md:w-[600px] bg-white absolute p-5 TextoCard">
@@ -106,7 +105,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide SliderCard">
-                    <img class="h-[300px] w-full object-cover " src="assets/img/contacto.png">
+                    <img class="h-[300px] w-full object-cover " src="assets/img/serviceslife.png">
 
                     <img class="clip-card " src="assets/img/clip.png">
                     <div class="md:w-[600px] bg-white absolute p-5 TextoCard">
@@ -118,7 +117,31 @@
                     </div>
                   </div>
                   <div class="swiper-slide SliderCard">
-                    <img class="h-[300px] w-full object-cover " src="assets/img/contacto.png">
+                    <img class="h-[300px] w-full object-cover " src="assets/img/ballenas.png">
+
+                    <img class="clip-card " src="assets/img/clip.png">
+                    <div class="md:w-[600px] bg-white absolute p-5 TextoCard">
+                        <h2 class="text-[#053a55]">SWIM WITH DOLPHINS</h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
+
+                    </div>
+                  </div>
+                  <div class="swiper-slide SliderCard">
+                    <img class="h-[300px] w-full object-cover " src="assets/img/drinks.png">
+
+                    <img class="clip-card " src="assets/img/clip.png">
+                    <div class="w-full md:w-[600px] bg-white absolute p-5 TextoCard">
+                        <h2 class="text-[#053a55]">Drinks</h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
+
+                    </div>
+                  </div>
+                  <div class="swiper-slide SliderCard">
+                    <img class="h-[300px] w-full object-cover " src="assets/img/comida.png">
 
                     <img class="clip-card " src="assets/img/clip.png">
                     <div class="md:w-[600px] bg-white absolute p-5 TextoCard">
@@ -130,7 +153,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide SliderCard">
-                    <img class="h-[300px] w-full object-cover " src="assets/img/contacto.png">
+                    <img class="h-[300px] w-full object-cover " src="assets/img/serviceslife.png">
 
                     <img class="clip-card " src="assets/img/clip.png">
                     <div class="md:w-[600px] bg-white absolute p-5 TextoCard">
@@ -141,6 +164,19 @@
 
                     </div>
                   </div>
+                  <div class="swiper-slide SliderCard">
+                    <img class="h-[300px] w-full object-cover " src="assets/img/ballenas.png">
+
+                    <img class="clip-card " src="assets/img/clip.png">
+                    <div class="md:w-[600px] bg-white absolute p-5 TextoCard">
+                        <h2 class="text-[#053a55]">SWIM WITH DOLPHINS</h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
+
+                    </div>
+                  </div>
+                 
               
                 </div>
                 <div class="swiper-button-next"></div>
@@ -177,9 +213,10 @@
 
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".SliderExperiences", {
         slidesPerView: 1,
       spaceBetween: 10,
+      loop:true,
         breakpoints: {
         640: {
           slidesPerView: 2,
@@ -200,15 +237,15 @@
         prevEl: ".swiper-button-prev",
       },
     });
-  </script>
-    <script>
-        var swiper = new Swiper(".mySwiper2", {
+
+    var swiper = new Swiper(".mySwiper2", {
            
-            navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-      </script>
+           navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+         },
+       });
+  </script>
+   <script src="assets/js/index.js"></script>
 </body>
 </html>

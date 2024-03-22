@@ -37,6 +37,13 @@
             </div>
             <div class=" w-1/2 md:w-1/6 gap-5 text-white flex justify-end  items-center">
                 <a href="">PRICE USD</a>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+              
+
                 <img class="IconMovil" src="assets/img/menu.png">
             </div>
         </nav>
@@ -183,7 +190,7 @@
                         <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
                             <img class="clip" src="assets/img/clip.png">
                             <p class="color-principal bold underline">CABO DEEPSEA FISHING</p>
-                            <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                            <a href="loscabos.html" class="color-principal  italic underline">VIEW YACHTS</a>
                         </div>
                     </div>
 
@@ -192,7 +199,7 @@
                         <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
                             <img class="clip" src="assets/img/clip.png">
                             <p class="color-principal bold underline">LA PAZ CRUISING</p>
-                            <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                            <a href="lapaz.html" class="color-principal  italic underline">VIEW YACHTS</a>
                         </div>
                     </div>
 
@@ -201,7 +208,7 @@
                         <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
                             <img class="clip" src="assets/img/clip.png">
                             <p class="color-principal bold underline">CABO DEEPSEA FISHING</p>
-                            <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                            <a href="loscabos.html" class="color-principal  italic underline">VIEW YACHTS</a>
                         </div>
                     </div>
                     <div class="swiper-slide CardSlider">
@@ -209,19 +216,9 @@
                         <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
                             <img class="clip" src="assets/img/clip.png">
                             <p class="color-principal bold underline">LA PAZ CRUISING</p>
-                            <a href="" class="color-principal  italic underline">VIEW MORE</a>
+                            <a href="lapaz.html" class="color-principal  italic underline">VIEW YACHTS</a>
                         </div>
                     </div>
-                    <div class="swiper-slide CardSlider">
-                        <img class="ImgCard" src="assets/img/paisaje.png" alt="">
-                        <div class="bg-white pb-[4rem] pt-[2rem] px-[2rem] relative">
-                            <img class="clip" src="assets/img/clip.png">
-                            <p class="color-principal bold underline">LA PAZ CRUISING</p>
-                            <a href="" class="color-principal  italic underline">VIEW MORE</a>
-                        </div>
-                    </div>
-
-
                 </div>
 
             </div>
@@ -312,18 +309,34 @@
 
         </section>
 
-
         <!-- Minibaners-->
-
-        <section class="w-full flex flex-col lg:flex-row my-[5rem] bg-white justify-between items-center pb-10 gap-5 lg:py-20">
-            <div class=" w-full lg:w-[50%]  pl-[1rem] lg:pl-[5rem] flex flex-col gap-5 order-1">
-                <h2 class="titulo-principal">GET TO KNOW OUR <br> MOST POPULAR</h2>
-                <a class="italic underline">VIEW YACHTS</a>
-                <img class="w-[150px]" src="assets/img/stars.svg" alt="">
+        <section class="w-full bg-white  flex justify-center my-10 xl:my-20">
+            <div class="flex  w-full xl:max-w-7xl  items-center gap-5 flex-col  xl:flex-row  ">
+                <div class="flex flex-col  gap-4  p-5  w-full  xl:w-1/2  order-1 xl:order-0">
+                    <h2 class="titulo-principal">GET TO KNOW OUR <br> MOST POPULAR</h2>
+                    <a class="italic underline">VIEW YACHTS</a>
+                    <img class="w-[150px]" src="assets/img/stars.svg" alt="">
+                </div>
+                <div class="swiper SliderYatesPopular w-full  xl:w-1/2 order-0 xl:order-1" style="--swiper-navigation-color: #fff;">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img class="w-full"  src="assets/img/yatepopular.png">
+                      </div>
+                      <div class="swiper-slide">
+                        <img  src="assets/img/yatepopular.png">
+                      </div>
+                
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
             </div>
-            <img class="ImgDegradado justify-self-stretch" src="assets/img/img-degradado.png" alt="">
         </section>
 
+
+        
+
+    
 
         <!--- REVIEWS --->
 
@@ -593,6 +606,14 @@
             loop:true,
             
         });
+
+        var swiper = new Swiper(".SliderYatesPopular", {
+           
+           navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+         },
+       });
 
     </script>
 
