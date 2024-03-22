@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- ===== LIBRERIAS JS ===== -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <title>Renta de Yates</title>
+</head>
+
+<body>
+
+    <header class="w-full flex justify-center fixed z-30">
+      
+                <img class="w-[140px]" src="../assets/img/logo.svg" alt="">
+           
+    </header>
+
+
+    <main>
+
+        <section class=" w-full mt-[10rem] p-5"> 
+            <form id="CrearYate" action="" class="w-full flex  gap-5 items-start">
+                <div class="flex flex-col gap-5 w-1/2">
+                    <input id="NombreYate" placeholder="Nombre Yate" class="InputFormB" type="text">
+                <input id="Descripcion" placeholder="Descripcion" class="InputFormB" type="text">
+
+                <div class="flex gap-5 w-full justify-between ">
+                    <input id="Bedrooms" placeholder="Bedrooms" class="InputFormB" type="text">
+                    <input id="Baths" placeholder="Baths" class="InputFormB" type="text">
+                    <input id="Food" placeholder="Food" class="InputFormB" type="text" value="Food & Open bar included">
+                </div>
+
+
+                <select id="Destino" class="InputFormB">
+                    <option src="" >LOS CABOS</option>
+                    <option src="" >LA PAZ</option>
+                </select>
+                <select id="Actividad" class="InputFormB">
+                    <option value="FISHING">FISHING</option>
+                    <option value="CRUISING">CRUISING</option>
+                </select>
+
+                <input id="Toys" placeholder="TOYS INCLUDED" class="InputFormB" type="text">
+
+
+                <div class="flex gap-5 w-full justify-between ">
+                    <input id="Precio2h" placeholder="Precio 2h" class="InputFormB" type="text">
+                    <input id="Precio4h" placeholder="Precio 4h" class="InputFormB" type="text">
+                    <input id="Precio6h" placeholder="Precio 6h" class="InputFormB" type="text">
+                    <input id="Precio8h" placeholder="Precio 8h" class="InputFormB" type="text">
+                </div>
+
+                <input id="FuelIncluded" placeholder="FUEL INCLUDED" class="InputFormB" type="text"  value="Yes, in order to give you an all included price, we already set the route and speed to be able to calculate costs">
+
+                <input id="Drinks" placeholder="DRINKS INCLUDED " class="InputFormB" type="text">
+
+
+                <div class="flex gap-5 w-full justify-between ">
+                    <input id="GuestIncluded" placeholder="GUESTS INCLUDED" class="InputFormB" type="text">
+                    <input id="MaxGuest" placeholder="MAX. GUEST CAPACITY" class="InputFormB" type="text">
+                    <input id="ExtraGuest" placeholder="EXTRA GUEST" class="InputFormB" type="text">
+                </div>
+              
+
+                <button id="ButtonAgregarYate" class="InputFormB flex justify-center items-center  gap-5 w-full">
+                  ENVIAR
+                </button>
+                </div>
+
+                <div class="w-1/2">
+                    <img  id="PreviewPortadaYate" class="w-full"  src="../assets/img/yate.png" alt=""> <br>
+                    <input id="FotosYate" type="file" multiple>
+                </div>
+               
+
+                
+            </form>
+
+          
+        </section>
+
+        <section class="w-full  max-w-7xl  mt-5 py-10  px-2 flex flex-col gap-5">
+
+
+            <h2 class="titulo-principal text-center ">Rent A Yatch</h2> 
+            <br>
+            
+
+
+            <div id="MostrarYates" class=" flex flex-wrap items-center justify-center xl:justify-between	 gap-10	">
+
+                
+
+               
+              
+
+
+            </div>
+        
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script>
+
+        new Swiper(".SliderYates", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            autoplay: {
+                delay: 3000
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "bullets",
+                clickable: true
+            }, breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+
+                },
+            },
+            slidesPerView: 1,
+            spaceBetween: 10,
+        });
+
+
+    </script>
+
+    <script src="index.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+
+</html>
