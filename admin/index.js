@@ -144,7 +144,7 @@ function MostrarYates() {
     <div class="flex justify-between	"> 
         <div class="">
             <p class=" bold underline">${data.NombreYate}</p>
-            <a href="https://rentayachtloscabos1.web.app/?${docId}" class=" italic underline">VIEW MORE</a>
+            <a href="https://rentayachtloscabos1.web.app/yate.html?${docId}" class=" italic underline">VIEW MORE</a>
         </div>
         <img src="../assets/img/starsB.svg">
     </div> <br>
