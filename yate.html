@@ -46,24 +46,23 @@
     </nav>
 </header>
 
+<style>
+  :root{
+    --swiper-navigation-color: #fff; --swiper-pagination-color: #fff
+  }
+</style>
+
   <main>
 
-    <section class="w-full flex flex-col gap-10 relative">
-      <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper SliderPortada">
+    <section  class="w-full flex flex-col gap-10 relative">
+      <div  id="MostrarFotosYate" class="swiper SliderPortada">
         <div class="swiper-wrapper">
-          <div class="swiper-slide ImgPortada">
-            <img src="assets/img/barco1.jpeg" />
-          </div>
-          <div class="swiper-slide ImgPortada">
-            <img src="assets/img/barco2.jpeg" />
-          </div>
-          <div class="swiper-slide ImgPortada">
-            <img src="assets/img/barco.jpeg" />
-          </div>
-
-
+          
         </div>
       </div>
+
+
+
       <div class="flex flex-col gap-5  z-10 ContenedorMiniSlider ">
         <div class="flex gap-5  ">
           <div class="flex gap-5">
@@ -74,18 +73,9 @@
             Sunseeker 80
           </h2>
         </div>
-        <div thumbsSlider="" class="swiper MiniSlider ">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide ImgPortada">
-              <img src="assets/img/barco1.jpeg" />
-            </div>
-            <div class="swiper-slide ImgPortada">
-              <img src="assets/img/barco2.jpeg" />
-            </div>
-            <div class="swiper-slide ImgPortada">
-              <img src="assets/img/barco.jpeg" />
-            </div>
-
+        <div id="MiniImagenes" thumbsSlider="" class="swiper MiniSlider ">
+          <div  class="swiper-wrapper">
+            
 
           </div>
         </div>
@@ -434,6 +424,8 @@
 
 
   <script src="assets/js/index.js"></script>
+  <script src="assets/js/yates.js"></script>
+
 </body>
 
 </html>

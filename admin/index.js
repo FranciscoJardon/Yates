@@ -127,6 +127,8 @@ function MostrarYates() {
     MostrarYates.innerHTML = "";
     snapshot.forEach((doc) => {
       const data = doc.data();
+      const docId = doc.id;
+      
       const ListaYates = document.createElement("div");
       ListaYates.classList.add(
         "card",
@@ -142,7 +144,7 @@ function MostrarYates() {
     <div class="flex justify-between	"> 
         <div class="">
             <p class=" bold underline">${data.NombreYate}</p>
-            <a href="" class=" italic underline">VIEW MORE</a>
+            <a href="https://rentayachtloscabos1.web.app/?${docId}" class=" italic underline">VIEW MORE</a>
         </div>
         <img src="../assets/img/starsB.svg">
     </div> <br>
